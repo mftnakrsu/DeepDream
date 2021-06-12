@@ -11,11 +11,11 @@ The DeepDream algorithm is almost identical to the convnet filter-visualization 
 
 DeepDream uses this same idea, with a few simple differences:
 
--With DeepDream,  you try to maximize the activation of entire layers rather than of a spesific filter, thus mixing together vis of large numbers of features at once.
--You start not from blank, slighlty noisy input, but rather from an existing image-thus the resulting effects latch on to preexisting visual patters, distorting elements of the images in a somewhat artistic fashion.
--The input images are processed at different scales (callede octaves), which improves the quality of the visualization.
+- With DeepDream,  you try to maximize the activation of entire layers rather than of a spesific filter, thus mixing together vis of large numbers of features at once.  
+- You start not from blank, slighlty noisy input, but rather from an existing image-thus the resulting effects latch on to preexisting visual patters, distorting elements of the images in a somewhat artistic fashion.  
+- The input images are processed at different scales (callede octaves), which improves the quality of the visualization.  
 
-In Keras, many such convnets are avaliable: VGG16,VGG19,Xception,ResNet50 and so on . In this application, I used inception_v3 convnets.
+In Keras, many such convnets are avaliable: VGG16, VGG19, Xception, ResNet50 and so on . In this application, I used inception_v3 convnets.
 
 ![alt text](https://paperswithcode.com/media/methods/inceptionv3onc--oview_vjAbOfw.png)
 
