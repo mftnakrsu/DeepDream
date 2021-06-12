@@ -29,3 +29,17 @@ The method is to process images at a list of “scales” and run gradient ascen
 Successive scales of spatial processing(octaves) and detail reinjection upon upscaling.
 
 ## Some Results:
+
+![](img/4.png)
+
+![](img/8.png)
+
+![](img/2.png)
+
+![](img/9.png)
+
+![](img/1.png)
+
+![](img/6.png)
+
+![](img/7.png)
