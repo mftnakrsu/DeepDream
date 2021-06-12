@@ -1,2 +1,31 @@
-# GAN-DeepDream
-Deep Dream
+# DeepDream
+
+DeepDream is an artistic image-modification technique that uses the representations learnd by CNN. It was firstt released by Google in the summer of 2015, as an implementation written using the Caffe framework. 
+
+![alt text](https://images.fastcompany.net/image/upload/w_1153,ar_16:9,c_fill,g_auto,f_auto,q_auto,fl_lossy/wp-cms/uploads/2015/07/3048941-poster-p-1-why-google-deep-dreams-of-dogs.jpg)
+
+
+It quickly became an internet sensation thanks to the trippy pictures it could generate. DeepDream convnet was trained on ImageNet, where dog breeds and bird species are vastly overpresented.
+
+The DeepDream algorithm is almost identical to the convnet filter-visualization technique, consisting of running a convnet in reverse: doing gradient ascent on the input to the convnet in order to maximize the activation of a spesific filter in an upper layer of the convnet.
+
+DeepDream uses this same idea, with a few simple differences:
+
+-With DeepDream,  you try to maximize the activation of entire layers rather than of a spesific filter, thus mixing together vis of large numbers of features at once.
+-You start not from blank, slighlty noisy input, but rather from an existing image-thus the resulting effects latch on to preexisting visual patters, distorting elements of the images in a somewhat artistic fashion.
+-The input images are processed at different scales (callede octaves), which improves the quality of the visualization.
+
+In Keras, many such convnets are avaliable: VGG16,VGG19,Xception,ResNet50 and so on . In this application, I used inception_v3 convnets.
+
+![alt text](https://paperswithcode.com/media/methods/inceptionv3onc--oview_vjAbOfw.png)
+
+If you want to more about "Inception", you should check this out this [paper](https://arxiv.org/pdf/1512.00567.pdf).  
+
+## The DeepDream process:
+
+The method is to process images at a list of “scales” and run gradient ascent to maximize the loss at this scale. With each successive scale, upscale the image by 40%. In order to avoid the lose of image detail when upscaling image from small to large, also inserted the lost details back by using the larger original image.
+
+![alt text](https://miro.medium.com/max/4060/1*MiknXo0BmGEecSWDkABHvA.png)  
+Successive scales of spatial processing(octaves) and detail reinjection upon upscaling.
+
+## Some Results:
