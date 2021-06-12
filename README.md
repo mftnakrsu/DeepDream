@@ -43,3 +43,9 @@ Successive scales of spatial processing(octaves) and detail reinjection upon ups
 ![](img/6.png)
 
 ![](img/7.png)
+
+## References:
+
+    https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html  
+    https://arxiv.org/abs/1512.00567  
+    https://www.amazon.com/Deep-Learning-Python-Francois-Chollet/dp/1617294438
