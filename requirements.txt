@@ -1,0 +1,5 @@
+matplotlib==3.3.4
+tensorflow==2.5.0
+keras_nightly==2.5.0.dev2021032900
+numpy==1.19.5
+keras==2.4.3
