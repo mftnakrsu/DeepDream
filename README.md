@@ -21,12 +21,39 @@ In Keras, many such convnets are avaliable: VGG16, VGG19, Xception, ResNet50 and
 
 If you want to more about "Inception", you should check this out this [paper](https://arxiv.org/pdf/1512.00567.pdf).  
 
+
 ## The DeepDream process:
 
 The method is to process images at a list of “scales” and run gradient ascent to maximize the loss at this scale. With each successive scale, upscale the image by 40%. In order to avoid the lose of image detail when upscaling image from small to large, also inserted the lost details back by using the larger original image.
 
 ![alt text](https://miro.medium.com/max/4060/1*MiknXo0BmGEecSWDkABHvA.png)  
 Successive scales of spatial processing(octaves) and detail reinjection upon upscaling.
+
+# Quick Start Examples
+
+## Installation
+
+    $ git clone https://github.com/mftnakrsu/DeepDream.git  
+    $ cd DeepDream  
+    $ pip install -r requirements.txt  
+    
+## Usage 
+    $ python -m main.py --image /path/to/image
+                     --step /numberofstep
+                     --iterations /numberofiterations
+                     --max_loss /maxlose/
+                     
+If you want different variations, you can change the layers:
+
+    layer_settings = {
+    "mixed7": 1.5,
+    "mixed8":1.5,
+    "mixed5":1.0,
+    }
+
+You can check the model layers with these commands:
+
+    print(model.summary())
 
 ## Some Results:
 
